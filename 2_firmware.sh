@@ -1,0 +1,1 @@
+yay -S --noconfirm --needed --disable-download-timeout mkinitcpio-firmware
