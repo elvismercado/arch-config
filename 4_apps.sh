@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source script_exit_utils.sh
+source setup_script_exit.sh
 setup_script_exit
 
 # Browsers

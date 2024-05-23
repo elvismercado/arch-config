@@ -4,7 +4,7 @@
 # Just prints if script executed successfully or prints the exit status
 
 # Setup these 2 lines in your script at the top
-# `source script_exit_utils.sh`
+# `source setup_script_exit.sh`
 # `setup_script_exit`
 
 

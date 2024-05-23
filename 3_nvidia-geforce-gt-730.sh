@@ -5,7 +5,7 @@
 # https://wiki.archlinux.org/title/NVIDIA
 # https://github.com/korvahannu/arch-nvidia-drivers-installation-guide
 
-source script_exit_utils.sh
+source setup_script_exit.sh
 setup_script_exit
 
 yay -S --noconfirm --needed --disable-download-timeout nvidia-470xx-dkms nvidia-470xx-utils lib32-nvidia-470xx-utils
@@ -19,8 +19,8 @@ sudo sed -i 's/\(GRUB_CMDLINE_LINUX_DEFAULT=".*\)"/\1 nvidia-drm.modeset=1"/' /e
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 # Early Loading of NVIDIA Modules
-sudo sed -i 's/\(MODULES=([^)]*\))/\1 nvidia nvidia_modeset nvidia_uvm nvidia_drm/' /etc/mkinitcpio.conf
-# sed -i 's/\(HOOKS=([^)]*\))/\1 ***REMOVE kms***/' /etc/mkinitcpio.conf
+sudo sed -i 's/\(MODULES=([^)]*\))/\1 nvidia nvidia_modeset nvidia_uvm nvidia_drm)/' /etc/mkinitcpio.conf
+sed -i 's/\(HOOKS=\([^)]*\)kms \([^)]*\)\)/\1\2/)\/g' /etc/mkinitcpio.conf
 sudo mkinitcpio -P
 
 # Pacman Hook
