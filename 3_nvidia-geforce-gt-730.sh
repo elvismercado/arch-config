@@ -8,6 +8,8 @@
 source setup_script_exit.sh
 setup_script_exit
 
+# linux-zen-headers
+
 yay -S --noconfirm --needed --disable-download-timeout nvidia-470xx-dkms nvidia-470xx-utils lib32-nvidia-470xx-utils
 yay -S --noconfirm --needed --disable-download-timeout nvidia-settings nvidia-tweaks
 
