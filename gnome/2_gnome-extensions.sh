@@ -1,9 +1,10 @@
 #!/bin/bash
 
-sudo pacman -S --needed --noconfirm --disable-download-timeout dconf-editor
+sudo pacman -S --needed --noconfirm --disable-download-timeout dconf-editor # GSettings editor for GNOME
 
-# Install a browser
-# Go to extensions.gnome.org
+# 1. Install a browser
+
+# 2. Go to https://extensions.gnome.org
 # install the browser extension
 # install the extensions from the list below
 

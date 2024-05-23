@@ -1,3 +1,8 @@
+#!/bin/bash
+
+source script_exit_utils.sh
+setup_script_exit
+
 # Docker
 
 sudo pacman -S --noconfirm --needed --disable-download-timeout docker docker-compose

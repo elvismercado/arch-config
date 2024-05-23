@@ -1,10 +1,12 @@
 #!/bin/bash
 
-# Caffeine
+# Desktop Icons NG
 
-gnome-extensions reset ding@rastersoft.com
+extensionName=ding@rastersoft.com
+
+gnome-extensions reset $extensionName
 
 dconf write /org/gnome/shell/extensions/ding/show-network-volumes "true"
 
-gnome-extensions disable ding@rastersoft.com
-gnome-extensions enable ding@rastersoft.com
+gnome-extensions disable $extensionName
+gnome-extensions enable $extensionName

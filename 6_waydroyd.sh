@@ -1,5 +1,8 @@
 #!/bin/bash
 
+source script_exit_utils.sh
+setup_script_exit
+
 # Danct12 commented on 2021-09-21 06:23 (UTC) (edited on 2021-10-08 16:06 (UTC) by Danct12)
 # Before install Waydroid, make sure that your kernel supports binder and ashmem module (currently only linux-zen does)
 

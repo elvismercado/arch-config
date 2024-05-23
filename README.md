@@ -1,4 +1,4 @@
-# Quick Shortcuts
+# Bios config
 - Update Bios
 - (Optional) Enable `CPU Virtualization`
 - Disbale `Fast Boot`
@@ -8,19 +8,24 @@
 - When PC post there is usually a `beep`. Press keys during or after beep.
   - Bios menu: `Del`
   - Boot menu: `F12`
-- GNOME uses GTK, KDE uses QT
+
+# Other
+- GNOME uses GTK
+- KDE uses QT
 
 # My Config
-
 - Arch Linux
 - installation
   - ISO
-  - Archinstall
+  - `archinstall`
 - Linux Kernel
-  - mainline would be preferred
-  - need linux-zen for waydroid!!
+  - mainline `linux` would be preferred
+  - need `linux-zen` for waydroid!!
 - nvidia drivers
-  - `nvidia nvidia-settings cuda ffnvcodec-headers`
+  - Depends on hardware
+  - Read:
+    - https://wiki.archlinux.org/title/NVIDIA
+    - https://github.com/korvahannu/arch-nvidia-drivers-installation-guide
 - GPT partitioning
 - BTRFS volume
   - /boot
@@ -71,13 +76,20 @@
     - $ `git clone https://github.com/elvismercado/arch-config.git`
     - $ `cd arch-config`
     - $ `chmod +x *.sh`
-    - $ `0_uninstall.sh`
-    - $ `1_yay.sh`
-    - $ `2_firmware.sh`
+    - $ `0_yay.sh`
+    - $ `1_firmware.sh`
     - $ `3_nvidia-geforce-gt-730`
+    - $ `10_uninstall.sh`
 
 
 # Stuff to research
 - [Firmware Bug]: Failed to parse event in TPM Final Events Log
   - maxcpus=1 ?
   - Disable TPM?
+
+# Preferred way of installing packages minimally
+- `sudo pacman -S --needed --noconfirm --disable-download-timeout [package(s)]`
+  - `-S` install package
+  - `--needed` only install the minimum set of packages needed to satisfy the dependencies
+  - `--noconfirm` disables the confirmation prompt
+  - `--disable-download-timeout` continue trying to download the package even if it takes a long time

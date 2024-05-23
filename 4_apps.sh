@@ -1,8 +1,20 @@
 #!/bin/bash
 
+source script_exit_utils.sh
+setup_script_exit
+
+# Browsers
+gpg --auto-key-locate nodefault,wkd --locate-keys torbrowser@torproject.org
+yay -S --noconfirm --needed --disable-download-timeout libnotify networkmanager speech-dispatcher
+# yay -S --noconfirm --needed --disable-download-timeout xdg-desktop-portal-gnome # GNOME
+yay -S --noconfirm --needed --disable-download-timeout brave-bin librewolf-bin mullvad-browser-bin
+
+# VS Code
+yay -S --noconfirm --needed --disable-download-timeout vscodium-bin vscodium-bin-marketplace vscodium-bin-features
+
 # Timeshift
-sudo pacman -S --noconfirm --needed --disable-download-timeout btrfs-progs grub-btrfs
-sudo pacman -S --noconfirm --needed --disable-download-timeout timeshift
+# With BTRFS support and snapshots in GRUB
+sudo pacman -S --noconfirm --needed --disable-download-timeout btrfs-progs grub-btrfs timeshift
 systemctl enable cronie.service
 
 # LibreOffice
@@ -19,7 +31,7 @@ sed -i '/^\[Data Source\]/{:a;n;/^Enabled/!ba;s/true/false/}' ~/.config/evolutio
 sudo pacman -S --noconfirm --needed --disable-download-timeout gimp gimp-help-en gimp-help-en_gb gimp-help-nl gimp-help-es gimp-nufraw gimp-plugin-gmic xsane-gimp
 
 # Obsidian
-sudo pacman -S --noconfirm --needed --disable-download-timeout obsidian
+# sudo pacman -S --noconfirm --needed --disable-download-timeout obsidian
 
 # Discord
 # libappindicator-gtk3
@@ -37,8 +49,9 @@ sudo pacman -S --noconfirm --needed --disable-download-timeout thunderbird thund
 sudo pacman -S --noconfirm --needed --disable-download-timeout variety
 
 # Terminals
-sudo pacman -S --noconfirm --needed --disable-download-timeout guake alacritty
+sudo pacman -S --noconfirm --needed --disable-download-timeout alacritty
 yay -S --noconfirm --needed --disable-download-timeout alacritty-themes
+# sudo pacman -S --noconfirm --needed --disable-download-timeout guake # GNOME
 
 # Youtube downloader
 sudo pacman -S --noconfirm --needed --disable-download-timeout yt-dlp
@@ -56,18 +69,21 @@ ln -s /usr/share/applications/ferdium.desktop ~/.config/autostart/
 
 # Insync
 # may require lib32-libappindicator-gtk2 for tray icon
-yay -S --noconfirm --needed --disable-download-timeout insync insync-nautilus
+yay -S --noconfirm --needed --disable-download-timeout insync
+# yay -S --noconfirm --needed --disable-download-timeout insync-nautilus # GNOME ships with nautilus
+# yay -S --noconfirm --needed --disable-download-timeout insync-dolphin # KDE ships with dolphin
 
 # Syncthing
 yay -S --noconfirm --needed --disable-download-timeout syncthingtray
 
 # ProtonMail Bridge
-yay -S --noconfirm --needed --disable-download-timeout gnome-keyring
+# yay -S --noconfirm --needed --disable-download-timeout gnome-keyring # GNOME
 yay -S --noconfirm --needed --disable-download-timeout protonmail-bridge-bin
 
 # Browsers
 gpg --auto-key-locate nodefault,wkd --locate-keys torbrowser@torproject.org
-yay -S --noconfirm --needed --disable-download-timeout libnotify networkmanager speech-dispatcher xdg-desktop-portal-gnome
+yay -S --noconfirm --needed --disable-download-timeout libnotify networkmanager speech-dispatcher
+# yay -S --noconfirm --needed --disable-download-timeout xdg-desktop-portal-gnome # GNOME
 yay -S --noconfirm --needed --disable-download-timeout brave-bin librewolf-bin mullvad-browser-bin
 
 # VS Code

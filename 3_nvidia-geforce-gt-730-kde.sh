@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Nvidia drivers
+# Nvidia drivers in Case of KDE Plasma
 
 # https://wiki.archlinux.org/title/NVIDIA
 # https://github.com/korvahannu/arch-nvidia-drivers-installation-guide

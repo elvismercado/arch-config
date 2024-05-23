@@ -1,5 +1,13 @@
 #!/bin/bash
 
+# Handle the exit status of a script
+# Just prints if script executed successfully or prints the exit status
+
+# Setup these 2 lines in your script at the top
+# `source script_exit_utils.sh`
+# `setup_script_exit`
+
+
 setup_script_exit() {
   log_exit() {
     local exit_status="$?"
@@ -10,7 +18,7 @@ setup_script_exit() {
     fi
   }
 
-  trap log_exit EXIT
+  trap log_exit EXIT # associate EXIT signal with log_exit function
 
-  set -e
+  set -e # exit immediately if any command fails
 }
