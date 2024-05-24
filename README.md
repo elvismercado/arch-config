@@ -1,4 +1,5 @@
 # Bios config
+
 - Update Bios
 - (Optional) Enable `CPU Virtualization`
 - Disbale `Fast Boot`
@@ -10,10 +11,12 @@
   - Boot menu: `F12`
 
 # Other
+
 - GNOME uses GTK
 - KDE uses QT
 
 # My Config
+
 - Arch Linux
 - installation
   - ISO
@@ -82,13 +85,14 @@
     - $ `3_nvidia-geforce-gt-730`
     - $ `10_uninstall.sh`
 
-
 # Stuff to research
+
 - [Firmware Bug]: Failed to parse event in TPM Final Events Log
   - maxcpus=1 ?
   - Disable TPM?
 
 # Preferred way of installing packages minimally
+
 - `sudo pacman -S --needed --noconfirm --disable-download-timeout [package(s)]`
   - `-S` install package
   - `--needed` only install the minimum set of packages needed to satisfy the dependencies

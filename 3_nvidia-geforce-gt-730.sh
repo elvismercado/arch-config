@@ -13,7 +13,7 @@ yay -S --needed --disable-download-timeout --removemake nvidia-470xx-dkms nvidia
 yay -S --needed --disable-download-timeout --removemake  nvidia-settings nvidia-tweaks
 
 # Remove orphaned packages (installed as dependencies but not required by any package)
-yay -Yc
+$ yay -Yc
 
 # check multilib repo
 # `/etc/pacman.conf`
