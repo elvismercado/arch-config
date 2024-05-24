@@ -8,11 +8,14 @@
 source setup_script_exit.sh
 setup_script_exit
 
-# linux-zen-headers
-sudo pacman -Rns --noconfirm nvidia nvidia-utils lib32-nvidia-utils nvidia-dkms nvidia-utils
+# Remove conflicting packages
+yay -S --noconfirm --needed --disable-download-timeout -C nvidia-470xx-dkms nvidia-470xx-utils lib32-nvidia-470xx-utils nvidia-tweaks
 
-yay -S --noconfirm --needed --disable-download-timeout nvidia-470xx-dkms nvidia-470xx-utils lib32-nvidia-470xx-utils
-yay -S --noconfirm --needed --disable-download-timeout nvidia-settings nvidia-tweaks
+# Install the required packages
+yay -S --noconfirm --needed --disable-download-timeout nvidia-470xx-dkms nvidia-470xx-utils lib32-nvidia-470xx-utils nvidia-tweaks
+
+# Remove orphaned packages
+yay -Rns $(yay -Qi --quiet | grep 'installed=' | cut -d '=' -f2- | xargs)
 
 # check multilib repo
 # `/etc/pacman.conf`
@@ -28,4 +31,4 @@ sudo mkinitcpio -P
 
 # Pacman Hook
 sudo mkdir -pv /etc/pacman.d/hooks/
-sudo cp "./geforce-gt-730/nvidia.hook" /etc/pacman.d/hooks/
+sudo cp -v ./geforce-gt-730/nvidia.hook /etc/pacman.d/hooks/

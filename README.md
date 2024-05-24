@@ -60,6 +60,7 @@
   - use GRUB
   - use Swap
   - use Desktop GNOME or KDE-PLASMA
+    - Use propietary drivers
   - use Pipewire
   - use linux-zen
   - multilib
