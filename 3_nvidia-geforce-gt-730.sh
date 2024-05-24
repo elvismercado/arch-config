@@ -9,13 +9,15 @@ source setup_script_exit.sh
 setup_script_exit
 
 # Remove conflicting packages
-yay -S --noconfirm --needed --disable-download-timeout -C nvidia-470xx-dkms nvidia-470xx-utils lib32-nvidia-470xx-utils nvidia-tweaks
+yay -S --noconfirm --needed --disable-download-timeout --removemake --useask nvidia-470xx-dkms nvidia-470xx-utils lib32-nvidia-470xx-utils nvidia-tweaks
 
 # Install the required packages
 yay -S --noconfirm --needed --disable-download-timeout nvidia-470xx-dkms nvidia-470xx-utils lib32-nvidia-470xx-utils nvidia-tweaks
 
 # Remove orphaned packages
-yay -Rns $(yay -Qi --quiet | grep 'installed=' | cut -d '=' -f2- | xargs)
+# yay -Rns $(yay -Qi --quiet | grep 'installed=' | cut -d '=' -f2- | xargs)
+# Remove orphaned packages (installed as dependencies but not required by any package)
+$ yay -Yc
 
 # check multilib repo
 # `/etc/pacman.conf`
