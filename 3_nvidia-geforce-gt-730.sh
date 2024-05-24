@@ -8,14 +8,12 @@
 source setup_script_exit.sh
 setup_script_exit
 
-yay -S --noconfirm --needed --disable-download-timeout --removemake --useask nvidia-470xx-dkms nvidia-470xx-utils lib32-nvidia-470xx-utils
+# Allowing user to confirm questions as conflicting packages may cause issues
+yay -S --needed --disable-download-timeout --removemake nvidia-470xx-dkms nvidia-470xx-utils lib32-nvidia-470xx-utils
+yay -S --needed --disable-download-timeout --removemake  nvidia-settings nvidia-tweaks
 
-yay -S --noconfirm --needed --disable-download-timeout nvidia-settings nvidia-tweaks
-
-# Remove orphaned packages
-# yay -Rns $(yay -Qi --quiet | grep 'installed=' | cut -d '=' -f2- | xargs)
 # Remove orphaned packages (installed as dependencies but not required by any package)
-$ yay -Yc
+yay -Yc
 
 # check multilib repo
 # `/etc/pacman.conf`
@@ -26,7 +24,7 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 # Early Loading of NVIDIA Modules
 sudo sed -i 's/\(MODULES=([^)]*\))/\1 nvidia nvidia_modeset nvidia_uvm nvidia_drm)/' /etc/mkinitcpio.conf
-sed -i 's/\(HOOKS=\([^)]*\)kms \([^)]*\)\)/\1\2/)\/g' /etc/mkinitcpio.conf
+# sed -i 's/\(HOOKS=\([^)]*\)kms \([^)]*\)\)/\1\2/)\/g' /etc/mkinitcpio.conf
 sudo mkinitcpio -P
 
 # Pacman Hook
