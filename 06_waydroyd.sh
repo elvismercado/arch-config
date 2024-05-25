@@ -16,7 +16,7 @@ setup_script_exit
 # Matrix: https://matrix.to/#/#waydroid:connolly.tech
 # Telegram: https://t.me/waydroid
 
-yay -S --noconfirm --needed --disable-download-timeout --removemake waydroid
+yay -S --noconfirm --needed --disable-download-timeout waydroid
 
 sudo waydroid init
 
