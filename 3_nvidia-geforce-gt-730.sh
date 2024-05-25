@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Nvidia drivers in Case of GNOME
+# Nvidia drivers in case of GeForce GT 730
 
 # https://wiki.archlinux.org/title/NVIDIA
 # https://github.com/korvahannu/arch-nvidia-drivers-installation-guide
@@ -10,10 +10,7 @@ setup_script_exit
 
 # Allowing user to confirm questions as conflicting packages may cause issues
 yay -S --needed --disable-download-timeout --removemake nvidia-470xx-dkms nvidia-470xx-utils lib32-nvidia-470xx-utils
-yay -S --needed --disable-download-timeout --removemake  nvidia-settings nvidia-tweaks
-
-# Remove orphaned packages (installed as dependencies but not required by any package)
-$ yay -Yc
+# yay -S --needed --disable-download-timeout --removemake nvidia-settings nvidia-tweaks
 
 # check multilib repo
 # `/etc/pacman.conf`
