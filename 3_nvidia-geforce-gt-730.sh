@@ -33,6 +33,6 @@ sudo cp -v ./geforce-gt-730/nvidia.hook /etc/pacman.d/hooks/
 
 # Fix text disappearing
 # https://bbs.archlinux.org/viewtopic.php?id=295693
-sudo echo "# If you are using GTK on very old hardware, you may be better off with the old GL renderer, since it makes fewer demands on the GPU.
-# You can override the renderer selection using the GSK_RENDERER environment variable:
-GSK_RENDERER=gl" >> /etc/environment
+sudo echo "# If you are using GTK on very old hardware, you may be better off with the old GL renderer, since it makes fewer demands on the GPU." >> /etc/environment
+sudo echo "# You can override the renderer selection using the GSK_RENDERER environment variable:" >> /etc/environment
+sudo echo "GSK_RENDERER=gl" >> /etc/environment
