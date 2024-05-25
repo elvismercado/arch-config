@@ -4,7 +4,7 @@
 - (Optional) Enable `CPU Virtualization`
 - Disbale `Fast Boot`
 - Disable `Secure Boot`
-- Enable `CSM Support`
+- Enable `CSM Support` <!-- Gigabyte X570 I Aorus Pro Wifi with GT730 -->
 - Disbale `Motherboard TPM (Trusted Computing)`
 - When PC post there is usually a `beep`. Press keys during or after beep.
   - Bios menu: `Del`

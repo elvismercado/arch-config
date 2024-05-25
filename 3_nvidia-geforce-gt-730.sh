@@ -27,3 +27,12 @@ sudo mkinitcpio -P
 # Pacman Hook
 sudo mkdir -pv /etc/pacman.d/hooks/
 sudo cp -v ./geforce-gt-730/nvidia.hook /etc/pacman.d/hooks/
+
+# making sure wayland is available
+# ln -s /dev/null /etc/udev/rules.d/61-gdm.rules
+
+# Fix text disappearing
+# https://bbs.archlinux.org/viewtopic.php?id=295693
+sudo echo "# If you are using GTK on very old hardware, you may be better off with the old GL renderer, since it makes fewer demands on the GPU.
+# You can override the renderer selection using the GSK_RENDERER environment variable:
+GSK_RENDERER=gl" >> /etc/environment
