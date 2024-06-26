@@ -9,7 +9,7 @@ source setup_script_exit.sh
 setup_script_exit
 
 # Allowing user to confirm questions as conflicting packages may cause issues
-yay -S --needed --disable-download-timeout nvidia-470xx-dkms nvidia-470xx-utils lib32-nvidia-470xx-utils nvidia-470xx-settingsn nvidia-tweaks
+yay -S --needed --disable-download-timeout nvidia-470xx-dkms nvidia-470xx-utils lib32-nvidia-470xx-utils nvidia-470xx-settings nvidia-tweaks
 
 # check multilib repo
 # `/etc/pacman.conf`
