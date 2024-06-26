@@ -9,7 +9,8 @@ source setup_script_exit.sh
 setup_script_exit
 
 # Allowing user to confirm questions as conflicting packages may cause issues
-yay -S --needed --disable-download-timeout nvidia-470xx-dkms nvidia-470xx-utils lib32-nvidia-470xx-utils nvidia-470xx-settings nvidia-tweaks
+yay -S --noconfirm --needed --disable-download-timeout nvidia-470xx-dkms nvidia-470xx-utils lib32-nvidia-470xx-utils
+yay -S --noconfirm --needed --disable-download-timeout nvidia-settings
 
 # check multilib repo
 # `/etc/pacman.conf`
@@ -32,3 +33,5 @@ sudo cp -v ./geforce-gt-730/nvidia.hook /etc/pacman.d/hooks/
 sudo sh -c 'echo "# If you are using GTK on very old hardware, you may be better off with the old GL renderer, since it makes fewer demands on the GPU." >> /etc/environment'
 sudo sh -c 'echo "# You can override the renderer selection using the GSK_RENDERER environment variable:" >> /etc/environment'
 sudo sh -c 'echo "GSK_RENDERER=gl" >> /etc/environment'
+
+yay -S --noconfirm --needed --disable-download-timeout nvidia-tweaks
