@@ -10,4 +10,4 @@ sudo pacman -S --noconfirm --needed --disable-download-timeout docker docker-com
 # I don't like the docker-desktop 
 yay -S --noconfirm --needed --disable-download-timeout lazydocker
 
-# systemctl enable docker.service
+systemctl enable docker.service

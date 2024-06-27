@@ -2,8 +2,10 @@
 
 # archiunstall from config
 
-# lsblk
+# `lsblk`: find usb device
 
-# mount --mkdir /dev/"yourdevice" /mnt/path/to/configs
+# 
 
-# archinstall --config /path/to/configs/user_configuration.json --creds /path/to/configs/user_credentials.json 
+# mount --mkdir /dev/[lsblk device name] /mnt/[lsblk device name]
+
+# archinstall --config /mnt/[lsblk device name]/user_configuration.json --creds /mnt/[lsblk device name]/user_credentials.json 
