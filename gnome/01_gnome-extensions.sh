@@ -11,7 +11,7 @@ sudo pacman -S --needed --noconfirm --disable-download-timeout dconf-editor # GS
 # Extension list
 # !! Its Best to install via browser extension !!
 
-# Appindicator
+# Appindicator and KStatusNotifierItem Support
 # appindicatorsupport@rgcjonas.gmail.com
 
 # Blur my Shell
@@ -20,11 +20,27 @@ sudo pacman -S --needed --noconfirm --disable-download-timeout dconf-editor # GS
 # Burn my Windows
 # burn-my-windows@schneegans.github.com
 
-# Dash2Dock Lite
+# Dash2Dock Lite (Animated)
 # dash2dock-lite@icedman.github.com
 
-# Extension list
+# Extension list by grroot
 # extension-list@tu.berry
+
+# Desktop Icons NG (DING)
+# ding@rastersoft.com
+
+# Uptime indicator
+# uptime-indicator@gniourfgniourf.gmail.com
+gnome-extensions reset uptime-indicator@gniourfgniourf.gmail.com
+gnome-extensions enable uptime-indicator@gniourfgniourf.gmail.com
+
+# System Monitor
+
+# Screenshot Window Sizer
+# uptime-indicator@gniourfgniourf.gmail.com
+# gnome-extensions reset uptime-indicator@gniourfgniourf.gmail.com
+# gnome-extensions enable uptime-indicator@gniourfgniourf.gmail.com
+
 
 # Removable Drive Menu
 # drive-menu@gnome-shell-extensions.gcampax.github.com
@@ -35,22 +51,6 @@ gnome-extensions enable drive-menu@gnome-shell-extensions.gcampax.github.com
 # workspace-indicator@gnome-shell-extensions.gcampax.github.com
 gnome-extensions reset workspace-indicator@gnome-shell-extensions.gcampax.github.com
 gnome-extensions enable workspace-indicator@gnome-shell-extensions.gcampax.github.com
-
-# Caffeine
-# caffeine@patapon.info
-
-# Desktop Icons NG
-# ding@rastersoft.com
-
-# Uptime indicator
-# uptime-indicator@gniourfgniourf.gmail.com
-gnome-extensions reset uptime-indicator@gniourfgniourf.gmail.com
-gnome-extensions enable uptime-indicator@gniourfgniourf.gmail.com
-
-# Screenshot Window Sizer
-# uptime-indicator@gniourfgniourf.gmail.com
-# gnome-extensions reset uptime-indicator@gniourfgniourf.gmail.com
-# gnome-extensions enable uptime-indicator@gniourfgniourf.gmail.com
 
 # Not working
 # Coverflow alt tab

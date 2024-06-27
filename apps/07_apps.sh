@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source setup_script_exit.sh
+source ../setup_script_exit.sh
 setup_script_exit
 
 # Desktop notifications
@@ -12,6 +12,9 @@ yay -S --noconfirm --needed --disable-download-timeout brave-bin librewolf-bin
 # VS Code
 yay -S --noconfirm --needed --disable-download-timeout vscodium-bin vscodium-bin-marketplace vscodium-bin-features
 # might need to remove xorg/wayland shortcut. where?
+
+# Signal
+yay -S --noconfirm --needed --disable-download-timeout signal-desktop
 
 # # Timeshift
 # # With BTRFS support and snapshots in GRUB
@@ -80,15 +83,6 @@ yay -S --noconfirm --needed --disable-download-timeout syncthingtray
 # ProtonMail Bridge
 # yay -S --noconfirm --needed --disable-download-timeout gnome-keyring # GNOME
 yay -S --noconfirm --needed --disable-download-timeout protonmail-bridge-bin
-
-# Browsers
-gpg --auto-key-locate nodefault,wkd --locate-keys torbrowser@torproject.org
-yay -S --noconfirm --needed --disable-download-timeout libnotify networkmanager speech-dispatcher
-# yay -S --noconfirm --needed --disable-download-timeout xdg-desktop-portal-gnome # GNOME
-yay -S --noconfirm --needed --disable-download-timeout brave-bin librewolf-bin mullvad-browser-bin
-
-# VS Code
-yay -S --noconfirm --needed --disable-download-timeout vscodium-bin vscodium-bin-marketplace vscodium-bin-features
 
 # Logitech devices
 sudo pacman -S --noconfirm --needed --disable-download-timeout libayatana-appindicator solaar

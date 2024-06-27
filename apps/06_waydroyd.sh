@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source setup_script_exit.sh
+source ../setup_script_exit.sh
 setup_script_exit
 
 # Danct12 commented on 2021-09-21 06:23 (UTC) (edited on 2021-10-08 16:06 (UTC) by Danct12)
