@@ -3,4 +3,4 @@
 source setup_script_exit.sh
 setup_script_exit
 
-sudo pacman -S --noconfirm --needed --disable-download-timeout linux-zen-headers
+sudo pacman -S --noconfirm --needed --disable-download-timeout git nano linux-zen-headers

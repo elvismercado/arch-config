@@ -5,6 +5,8 @@
 # https://wiki.archlinux.org/title/NVIDIA
 # https://github.com/korvahannu/arch-nvidia-drivers-installation-guide
 
+# pacman -S xorg-drivers # For all if you do not know
+
 source setup_script_exit.sh
 setup_script_exit
 
