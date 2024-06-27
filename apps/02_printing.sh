@@ -13,7 +13,7 @@ yay -S --noconfirm --needed --disable-download-timeout usbutils ipp-usb
 # Network
 # https://wiki.archlinux.org/title/Avahi#Hostname_resolution
 yay -S --noconfirm --needed --disable-download-timeout nss-mdns 
-sed -i '/^hosts:/ s/resolve/mdns_minimal [NOTFOUND=return] resolve/' /etc/nsswitch.conf
+sudo sed -i '/^hosts:/ s/resolve/mdns_minimal [NOTFOUND=return] resolve/' /etc/nsswitch.conf
 
 # OpenPrinting CUPS filters
 yay -S --noconfirm --needed --disable-download-timeout cups-filters ghostscript gsfonts
