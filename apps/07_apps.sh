@@ -3,14 +3,15 @@
 source setup_script_exit.sh
 setup_script_exit
 
+# Desktop notifications
+# libnotify 
+
 # Browsers
-gpg --auto-key-locate nodefault,wkd --locate-keys torbrowser@torproject.org
-yay -S --noconfirm --needed --disable-download-timeout libnotify networkmanager speech-dispatcher
-# yay -S --noconfirm --needed --disable-download-timeout xdg-desktop-portal-gnome # GNOME
 yay -S --noconfirm --needed --disable-download-timeout brave-bin librewolf-bin
 
 # VS Code
 yay -S --noconfirm --needed --disable-download-timeout vscodium-bin vscodium-bin-marketplace vscodium-bin-features
+# might need to remove xorg/wayland shortcut. where?
 
 # # Timeshift
 # # With BTRFS support and snapshots in GRUB

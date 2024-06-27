@@ -9,8 +9,8 @@ sudo pacman -S --needed --noconfirm --disable-download-timeout dconf-editor # GS
 # install the extensions from the list below
 
 # Extension list
-# Its Best to install via browser extension
-# 
+# !! Its Best to install via browser extension !!
+
 # Appindicator
 # appindicatorsupport@rgcjonas.gmail.com
 
@@ -46,6 +46,11 @@ gnome-extensions enable workspace-indicator@gnome-shell-extensions.gcampax.githu
 # uptime-indicator@gniourfgniourf.gmail.com
 gnome-extensions reset uptime-indicator@gniourfgniourf.gmail.com
 gnome-extensions enable uptime-indicator@gniourfgniourf.gmail.com
+
+# Screenshot Window Sizer
+# uptime-indicator@gniourfgniourf.gmail.com
+# gnome-extensions reset uptime-indicator@gniourfgniourf.gmail.com
+# gnome-extensions enable uptime-indicator@gniourfgniourf.gmail.com
 
 # Not working
 # Coverflow alt tab
