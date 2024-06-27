@@ -3,6 +3,7 @@
 source setup_script_exit.sh
 setup_script_exit
 
-sudo pacman -S --noconfirm --needed --disable-download-timeout git nano linux-zen-headers
+# Update package list and upgrade all currently installed repo and AUR.
+sudo pacman -Syu
 
-# colord: monitor color manager
+sudo pacman -S --noconfirm --needed --disable-download-timeout git nano linux-zen-headers

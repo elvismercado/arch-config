@@ -1,0 +1,1 @@
+# colord: monitor color manager
