@@ -30,5 +30,5 @@ yay -S --noconfirm --needed --disable-download-timeout bluez-cups
 # HP drivers
 yay -S --noconfirm --needed --disable-download-timeout hplip
 
-# systemctl enable --now avahi-daemon
-# systemctl enable --now cups
+systemctl enable --now avahi-daemon
+systemctl enable --now cups
