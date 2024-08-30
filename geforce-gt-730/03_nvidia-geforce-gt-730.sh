@@ -28,7 +28,7 @@ sudo mkinitcpio -P
 
 # Pacman Hook
 sudo mkdir -pv /etc/pacman.d/hooks/
-sudo cp -v ./geforce-gt-730/nvidia.hook /etc/pacman.d/hooks/
+sudo cp -v ./nvidia.hook /etc/pacman.d/hooks/
 
 # Fix text disappearing
 # https://bbs.archlinux.org/viewtopic.php?id=295693
